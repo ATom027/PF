@@ -2,15 +2,15 @@
 
 (def precision 0.1)
 
-;; return (x*x*x)
+; return (x*x*x)
 (defn cube
   [x]
-  (* (* x x) x))
+  (* x x x))
 
-;; return (Math.abs(x - y^3))
+; return (Math.abs(x - y^3))
 (defn abs
   [y x]
-  (Math/abs ^{:tag double} (- x (cube y)))
+  (Math/abs ^double (- x (cube y)))
 )
 
 (defn good-enough?
@@ -33,3 +33,8 @@
   (if (good-enough? y x)
     y
     (heron-cube (improve y x) x)))
+
+(defn printh
+  [y x]
+  (println (double(heron-cube y x)))
+)
