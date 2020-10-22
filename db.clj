@@ -25,7 +25,7 @@
   [email]
   (str ( "ul. "
     (:street (@persons-atom email)) " "
-    (:nr_street (@persons-atom email)) ", "
+    (:street_nr (@persons-atom email)) ", "
     (:postcode (@persons-atom email)) " "
     (:city (@persons-atom email))
   )
